@@ -52,18 +52,18 @@
          */
         Items *paternityExample = [[Items alloc] init];
         paternityExample.header = @"OC高级语法的实践";
-        paternityExample.titles = @[@"1.1 UIButton",@"1.2 UILabel "
-                                    ,@"1.3 RunLoop",@"1.4 UIImageView"
-                                    ,@"1.5 UITextView",@"1.6 UISlider"
-                                    ,@"1.7 UISwitch",@"1.8 UIAlertController"
-                                    ,@"1.9 UISegmentedControl",@"1.10 ScrollViewController"
+        paternityExample.titles = @[@"1.1 block的使用",@"1.2 block在ARC/MRC中的区别 "
+                                    ,@"1.3 RunLoop",@"1.4 RunLoop中的model"
+                                    ,@"1.5 RunLoop中的timer",@"1.6 NSThread"
+                                    ,@"1.7 UISwitch",@"1.8 Runtime"
+                                    ,@"1.9 GCDController",@"1.10 ScrollViewController"
                                     ,@"1.11 TableViewController",@"1.12 PageViewController"
                                     ,@"1.13 NetEaseNewsController",@"1.14 TableViewController"];
-        paternityExample.classes = @[@"SecondViewController",@"ThirdViewController",@"RunLoopController"
-                                     ,@"ImageViewViewController",@"TextViewViewController"
-                                     ,@"SliderViewController"
-                                     ,@"SwitchViewController",@"AlertController"
-                                     ,@"SegmentedController",@"ScrollViewController"
+        paternityExample.classes = @[@"BlockViewController",@"BlockDiffViewController",@"RunLoopController"
+                                     ,@"RunLoopModelViewController",@"RunLoopTimerViewController"
+                                     ,@"NSThreadController"
+                                     ,@"SwitchViewController",@"RuntimeController"
+                                     ,@"GCDController",@"ScrollViewController"
                                      ,@"TableViewController",@"PageViewController"
                                      ,@"NetEaseNewsController",@"ThirdViewController"
                                      ,@"ThirdViewController"];

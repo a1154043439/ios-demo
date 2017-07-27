@@ -12,8 +12,10 @@
 
 #endif /* RunLoopController_h */
 #import <UIKit/UIKit.h>
+#import "masonry.h"
 
 @interface RunLoopController : UIViewController
-
+@property (nonatomic , strong) UIButton * btn;
+@property (nonatomic , strong) UIButton * btn1;
 
 @end

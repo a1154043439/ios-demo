@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5216589B1F278A1900232005 /* CustomThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5216589A1F278A1900232005 /* CustomThread.mm */; };
 		5216589E1F278D3C00232005 /* Items.m in Sources */ = {isa = PBXBuildFile; fileRef = 5216589D1F278D3C00232005 /* Items.m */; };
 		524FC5021F283C91004F0E10 /* RunLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 524FC5011F283C91004F0E10 /* RunLoopController.m */; };
 		527D6CB61F21FFF00030730D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 527D6CB51F21FFF00030730D /* main.m */; };
@@ -18,6 +17,16 @@
 		527D6CC41F21FFF00030730D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527D6CC21F21FFF00030730D /* LaunchScreen.storyboard */; };
 		527D6CCF1F21FFF00030730D /* demo5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 527D6CCE1F21FFF00030730D /* demo5Tests.m */; };
 		527D6CDA1F21FFF00030730D /* demo5UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 527D6CD91F21FFF00030730D /* demo5UITests.m */; };
+		52DC1C701F29688C000D1260 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC1C6F1F29688C000D1260 /* BlockViewController.m */; };
+		52DC1C731F297B67000D1260 /* RunLoopModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC1C721F297B67000D1260 /* RunLoopModelViewController.m */; };
+		52DC1C751F297B72000D1260 /* BlockDiffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC1C741F297B72000D1260 /* BlockDiffViewController.m */; };
+		52DC1C791F297C61000D1260 /* RunLoopTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC1C781F297C61000D1260 /* RunLoopTimerViewController.m */; };
+		52DC1C7B1F29836E000D1260 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52DC1C7A1F29836E000D1260 /* 2.jpg */; };
+		52DC1C7D1F299715000D1260 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52DC1C7C1F299715000D1260 /* 3.jpg */; };
+		52DC1C801F29B3E8000D1260 /* WorkThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC1C7F1F29B3E8000D1260 /* WorkThread.m */; };
+		52DC1C841F29BBC8000D1260 /* NSThreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC1C831F29BBC8000D1260 /* NSThreadController.m */; };
+		52DC1C861F29BFA1000D1260 /* GCDController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC1C851F29BFA1000D1260 /* GCDController.m */; };
+		52DC1C8A1F29E020000D1260 /* RunTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC1C891F29E020000D1260 /* RunTimeController.m */; };
 		AEDB4E1FBF7881F86CE947C1 /* libPods-demo5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25960E195F19DB257D2AE807 /* libPods-demo5.a */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +51,6 @@
 		20269074C974464A5CC02978 /* Pods-demo5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo5.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo5/Pods-demo5.release.xcconfig"; sourceTree = "<group>"; };
 		25960E195F19DB257D2AE807 /* libPods-demo5.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demo5.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9D29C6309E384C5D85C972 /* Pods-demo5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo5.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo5/Pods-demo5.debug.xcconfig"; sourceTree = "<group>"; };
-		521658991F278A0600232005 /* CustomThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CustomThread.h; path = "../../../Downloads/RunLoopDemo-master/RunLoopDemo01/ZYRunLoopDemo/CustomThread.h"; sourceTree = "<group>"; };
-		5216589A1F278A1900232005 /* CustomThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomThread.mm; path = "../../../Downloads/RunLoopDemo-master/RunLoopDemo01/ZYRunLoopDemo/CustomThread.mm"; sourceTree = "<group>"; };
 		5216589C1F278D1400232005 /* Items.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Items.h; path = ../../demo4/demo4/main/model/Items.h; sourceTree = "<group>"; };
 		5216589D1F278D3C00232005 /* Items.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Items.m; path = ../../demo4/demo4/main/model/Items.m; sourceTree = "<group>"; };
 		524FC5001F283C5D004F0E10 /* RunLoopController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopController.h; sourceTree = "<group>"; };
@@ -64,6 +71,24 @@
 		527D6CD51F21FFF00030730D /* demo5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demo5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		527D6CD91F21FFF00030730D /* demo5UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = demo5UITests.m; sourceTree = "<group>"; };
 		527D6CDB1F21FFF00030730D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52DC1C6E1F296827000D1260 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
+		52DC1C6F1F29688C000D1260 /* BlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
+		52DC1C711F297B58000D1260 /* RunLoopModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopModelViewController.h; sourceTree = "<group>"; };
+		52DC1C721F297B67000D1260 /* RunLoopModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopModelViewController.m; sourceTree = "<group>"; };
+		52DC1C741F297B72000D1260 /* BlockDiffViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockDiffViewController.m; sourceTree = "<group>"; };
+		52DC1C761F297B80000D1260 /* BlockDiffViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockDiffViewController.h; sourceTree = "<group>"; };
+		52DC1C771F297C51000D1260 /* RunLoopTimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopTimerViewController.h; sourceTree = "<group>"; };
+		52DC1C781F297C61000D1260 /* RunLoopTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopTimerViewController.m; sourceTree = "<group>"; };
+		52DC1C7A1F29836E000D1260 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = ../../../.Trash/2.jpg; sourceTree = "<group>"; };
+		52DC1C7C1F299715000D1260 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 3.jpg; path = ../../../Downloads/3.jpg; sourceTree = "<group>"; };
+		52DC1C7F1F29B3E8000D1260 /* WorkThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkThread.m; sourceTree = "<group>"; };
+		52DC1C811F29B400000D1260 /* WorkThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkThread.h; sourceTree = "<group>"; };
+		52DC1C821F29BBBB000D1260 /* NSThreadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadController.h; sourceTree = "<group>"; };
+		52DC1C831F29BBC8000D1260 /* NSThreadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThreadController.m; sourceTree = "<group>"; };
+		52DC1C851F29BFA1000D1260 /* GCDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDController.m; sourceTree = "<group>"; };
+		52DC1C871F29BFAD000D1260 /* GCDController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDController.h; sourceTree = "<group>"; };
+		52DC1C881F29E007000D1260 /* RunTimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeController.h; sourceTree = "<group>"; };
+		52DC1C891F29E020000D1260 /* RunTimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunTimeController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +130,20 @@
 			children = (
 				524FC5001F283C5D004F0E10 /* RunLoopController.h */,
 				524FC5011F283C91004F0E10 /* RunLoopController.m */,
+				52DC1C711F297B58000D1260 /* RunLoopModelViewController.h */,
+				52DC1C721F297B67000D1260 /* RunLoopModelViewController.m */,
+				52DC1C761F297B80000D1260 /* BlockDiffViewController.h */,
+				52DC1C741F297B72000D1260 /* BlockDiffViewController.m */,
+				52DC1C6E1F296827000D1260 /* BlockViewController.h */,
+				52DC1C6F1F29688C000D1260 /* BlockViewController.m */,
+				52DC1C771F297C51000D1260 /* RunLoopTimerViewController.h */,
+				52DC1C781F297C61000D1260 /* RunLoopTimerViewController.m */,
+				52DC1C821F29BBBB000D1260 /* NSThreadController.h */,
+				52DC1C831F29BBC8000D1260 /* NSThreadController.m */,
+				52DC1C871F29BFAD000D1260 /* GCDController.h */,
+				52DC1C851F29BFA1000D1260 /* GCDController.m */,
+				52DC1C881F29E007000D1260 /* RunTimeController.h */,
+				52DC1C891F29E020000D1260 /* RunTimeController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -134,6 +173,7 @@
 		527D6CB31F21FFEF0030730D /* demo5 */ = {
 			isa = PBXGroup;
 			children = (
+				52DC1C7E1F29B3C5000D1260 /* Thread */,
 				5216589F1F278DA000232005 /* Controller */,
 				527D6CB71F21FFF00030730D /* AppDelegate.h */,
 				527D6CB81F21FFF00030730D /* AppDelegate.m */,
@@ -141,9 +181,9 @@
 				527D6CBB1F21FFF00030730D /* ViewController.m */,
 				5216589C1F278D1400232005 /* Items.h */,
 				5216589D1F278D3C00232005 /* Items.m */,
-				521658991F278A0600232005 /* CustomThread.h */,
-				5216589A1F278A1900232005 /* CustomThread.mm */,
 				527D6CBD1F21FFF00030730D /* Main.storyboard */,
+				52DC1C7A1F29836E000D1260 /* 2.jpg */,
+				52DC1C7C1F299715000D1260 /* 3.jpg */,
 				527D6CC01F21FFF00030730D /* Assets.xcassets */,
 				527D6CC21F21FFF00030730D /* LaunchScreen.storyboard */,
 				527D6CC51F21FFF00030730D /* Info.plist */,
@@ -176,6 +216,15 @@
 				527D6CDB1F21FFF00030730D /* Info.plist */,
 			);
 			path = demo5UITests;
+			sourceTree = "<group>";
+		};
+		52DC1C7E1F29B3C5000D1260 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				52DC1C811F29B400000D1260 /* WorkThread.h */,
+				52DC1C7F1F29B3E8000D1260 /* WorkThread.m */,
+			);
+			name = Thread;
 			sourceTree = "<group>";
 		};
 		F5420985C9274F29AF3F03E3 /* Pods */ = {
@@ -296,8 +345,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52DC1C7D1F299715000D1260 /* 3.jpg in Resources */,
 				527D6CC41F21FFF00030730D /* LaunchScreen.storyboard in Resources */,
 				527D6CC11F21FFF00030730D /* Assets.xcassets in Resources */,
+				52DC1C7B1F29836E000D1260 /* 2.jpg in Resources */,
 				527D6CBF1F21FFF00030730D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,11 +426,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				527D6CBC1F21FFF00030730D /* ViewController.m in Sources */,
+				52DC1C751F297B72000D1260 /* BlockDiffViewController.m in Sources */,
 				527D6CB91F21FFF00030730D /* AppDelegate.m in Sources */,
 				5216589E1F278D3C00232005 /* Items.m in Sources */,
+				52DC1C861F29BFA1000D1260 /* GCDController.m in Sources */,
+				52DC1C801F29B3E8000D1260 /* WorkThread.m in Sources */,
+				52DC1C731F297B67000D1260 /* RunLoopModelViewController.m in Sources */,
 				524FC5021F283C91004F0E10 /* RunLoopController.m in Sources */,
-				5216589B1F278A1900232005 /* CustomThread.mm in Sources */,
+				52DC1C791F297C61000D1260 /* RunLoopTimerViewController.m in Sources */,
+				52DC1C701F29688C000D1260 /* BlockViewController.m in Sources */,
 				527D6CB61F21FFF00030730D /* main.m in Sources */,
+				52DC1C841F29BBC8000D1260 /* NSThreadController.m in Sources */,
+				52DC1C8A1F29E020000D1260 /* RunTimeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

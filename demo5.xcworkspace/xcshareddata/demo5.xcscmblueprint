@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D94E58E0A471AA68642438EA5FD4E5CF87FB3996",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D5B700B58C019C5377E943FE36B6C75450AC0CA8" : 9223372036854775807,
+    "D94E58E0A471AA68642438EA5FD4E5CF87FB3996" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7F0A54F2-4F7B-4DE0-B104-A052ECA60694",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D5B700B58C019C5377E943FE36B6C75450AC0CA8" : "demo4\/",
+    "D94E58E0A471AA68642438EA5FD4E5CF87FB3996" : "demo5\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "demo5",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "demo5.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/a1154043439\/ios-ui-demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D5B700B58C019C5377E943FE36B6C75450AC0CA8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/a1154043439\/ios-demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D94E58E0A471AA68642438EA5FD4E5CF87FB3996"
+    }
+  ]
+}

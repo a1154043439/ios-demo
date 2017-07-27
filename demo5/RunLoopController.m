@@ -6,12 +6,13 @@
 //  Copyright © 2017年 test. All rights reserved.
 //
 #import "RunLoopController.h"
-#import "masonry.h"
-@interface RunLoopController()
+
+@interface RunLoopController()<NSPortDelegate>
 //这是一个RunLoopDemo,主要是测试RunLoop的用法
 @property (strong,nonatomic)NSThread *thread; //使用Strong属性
-@property (nonatomic , strong) UIButton * btn;
-@property (nonatomic , strong) UIButton * btn1;
+@property (strong,nonatomic)NSRunLoop *theRL;
+@property (nonatomic , strong) UIButton * btn2;
+
 @end
 
 @implementation RunLoopController
@@ -37,17 +38,24 @@
 {
     self.title = @"RunLoopDemo";
 }
-
++(void)load
+{
+    
+}
 #pragma mark - 设置子控件
 - (void)_setupSubViews
 {
     self.btn = [UIButton buttonWithType:UIButtonTypeSystem];
       self.btn1 = [UIButton buttonWithType:UIButtonTypeSystem];
+    self.btn2 = [UIButton buttonWithType:UIButtonTypeSystem];
+
 
     
    
     self.btn.backgroundColor = [UIColor redColor];
     self.btn1.backgroundColor = [UIColor blueColor];
+    self.btn2 = [UIButton buttonWithType:UIButtonTypeSystem];
+
     /*
      Type:
      UIButtonTypeCustom = 0, // 自定义类型
@@ -71,12 +79,15 @@
     self.btn.titleLabel.font = [UIFont systemFontOfSize:20];
      self.btn1.titleLabel.font = [UIFont systemFontOfSize:20];
     
+    
     //设置按钮文字标题
     [self.btn setTitle:@"为子线程runloop添加observer" forState:UIControlStateNormal];
     [self.btn1 setTitle:@"为子线程runloop添加timer" forState:UIControlStateNormal];
+    [self.btn2 setTitle:@"为子线程runloop添加source" forState:UIControlStateNormal];
     
-    [self.btn addTarget:self action:@selector(addRunLoopObserver) forControlEvents:UIControlEventTouchUpInside];
-    [self.btn1 addTarget:self action:@selector(addTimer) forControlEvents:UIControlEventTouchUpInside];
+    [self.btn addTarget:self action:@selector(task1) forControlEvents:UIControlEventTouchUpInside];
+    [self.btn1 addTarget:self action:@selector(task2) forControlEvents:UIControlEventTouchUpInside];
+   [self.btn2 addTarget:self action:@selector(task3) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:self.btn];
     [self.view addSubview:self.btn1];
@@ -94,10 +105,16 @@
         make.height.mas_equalTo(self.btn.mas_height);
         
     } ];
+    
+    [self.btn2  mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.btn1.mas_bottom).with.offset(20);
+        make.centerX.equalTo(self.btn1.mas_centerX);
+        make.width.mas_equalTo(self.btn1.mas_width);
+        make.height.mas_equalTo(self.btn1.mas_height);
+        
+    } ];
 }
 
-
-#pragma mark -- 测试一：子线程Selector源的启动
 
 
 #pragma mark - NSRunLoop简介 -
@@ -132,11 +149,10 @@
     //
     NSLog(@"NSRunLoop转换为CFRunLoopRef%@----%p----%p", [NSThread currentThread], cfMainRunLoop, mainRunLoop.getCFRunLoop);
     
-    // 开启子线程，执行task方法。
-    [NSThread detachNewThreadSelector:@selector(task) toTarget:self withObject:nil];
+   
 }
 
-- (void)task {
+- (void)task1 {
     
     /* 子线程和RunLoop
      1. 每一个子线程，都对应一个自己的RunLoop。
@@ -146,11 +162,25 @@
      */
     
     //
-    NSLog(@"子线程当前RunLoop%@----%p----%p", [NSThread currentThread], [NSRunLoop currentRunLoop], [NSRunLoop mainRunLoop]);
-    
-    // 2. 开启一个新的RunLoop
-    [[NSRunLoop currentRunLoop] run];
+       _thread =[[NSThread alloc]initWithTarget:self selector:@selector(addRunLoopObserver) object:nil];
+       [self.thread start];
+     // [NSThread detachNewThreadSelector:@selector(addRunLoopObserver) toTarget:self withObject:nil];
+
 }
+
+- (void)task2 {
+    
+    [NSThread detachNewThreadSelector:@selector(addTimer) toTarget:self withObject:nil];
+    
+}
+
+
+- (void)task3 {
+    
+    [NSThread detachNewThreadSelector:@selector(addSource) toTarget:self withObject:nil];
+    
+}
+#pragma mark -- 添加观察者
 
 /**
  观察者可以观察到RunLoop不同的运行状态
@@ -207,23 +237,46 @@
      CFRunLoopObserverRef observer 要添加的监听者
      CFStringRef mode RunLoop的运行模式
      */
+    NSLog(@"子线程当前RunLoop%@----%p----%p", [NSThread currentThread], [NSRunLoop currentRunLoop], [NSRunLoop mainRunLoop]);
+    
+  
     CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
+  
+    self.theRL = [NSRunLoop currentRunLoop];
+    [self.theRL run];
 }
 
 
-- (void)addTimer {
+#pragma mark -- 添加定时器
 
-NSTimer *timer = [NSTimer timerWithTimeInterval:2.0 target:self selector:@selector(run) userInfo:nil repeats:YES];
+- (void)addTimer {
+//
+NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timeTask) userInfo:nil repeats:NO];
 
 // 将定时器添加到当前RunLoop的NSDefaultRunLoopMode下
 [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+
+    [self addRunLoopObserver];
+}
+-(void)timeTask{
+NSLog(@"定时执行任务");
 }
 
-- (void)run
-{
-    NSLog(@"---run");
-}
 
+#pragma mark -- 添加事件源
+//配置基于端口的输入源
+
+- (void)addSource{
+
+    [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop currentRunLoop] run];
+    
+    [self addRunLoopObserver];
+
+
+}
+        
+    
 
 @end
 
